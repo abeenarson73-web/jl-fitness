@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abeenarson73-web.github.io/jl-fitness/sitemap.xml
