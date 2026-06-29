@@ -1,5 +1,29 @@
 // JL Fitness — main.js
 
+// Opening text sequence intro overlay
+(function () {
+  var overlay = document.getElementById('introOverlay');
+  if (!overlay) return;
+
+  // Show once per session; skip on return visits
+  if (sessionStorage.getItem('introSeen')) {
+    overlay.classList.add('intro-hidden');
+    return;
+  }
+
+  document.body.style.overflow = 'hidden';
+
+  // At 2.5s begin fade-out; at completion hide the overlay and unlock scroll
+  setTimeout(function () {
+    overlay.classList.add('intro-out');
+    overlay.addEventListener('animationend', function () {
+      overlay.classList.add('intro-hidden');
+      document.body.style.overflow = '';
+      sessionStorage.setItem('introSeen', '1');
+    }, { once: true });
+  }, 2500);
+})();
+
 // Mobile nav toggle
 (function () {
   const toggle = document.querySelector('.nav-toggle');

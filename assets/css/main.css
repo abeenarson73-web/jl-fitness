@@ -433,6 +433,51 @@ p  { max-width: 62ch; }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose li + li { margin-top: var(--s-2); }
 
+/* ---- Intro overlay -------------------------------------------------------- */
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--s-5);
+  pointer-events: none;
+}
+.intro-overlay.intro-hidden { display: none; }
+
+.intro-text {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  max-width: 26ch;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  opacity: 0;
+  animation: introTextIn 0.75s ease forwards;
+}
+
+.intro-overlay.intro-out {
+  animation: introOverlayOut 0.9s ease forwards;
+}
+
+@keyframes introTextIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes introOverlayOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-text { animation: none; opacity: 1; }
+}
+
 /* ---- Reveal ---------------------------------------------------------------- */
 .reveal { transition: opacity 0.7s ease, transform 0.7s ease; }
 .js .reveal { opacity: 0; transform: translateY(22px); }
