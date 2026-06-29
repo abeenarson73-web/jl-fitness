@@ -433,6 +433,63 @@ p  { max-width: 62ch; }
 .prose ul, .prose ol { padding-left: 1.4em; }
 .prose li + li { margin-top: var(--s-2); }
 
+/* ---- Manifesto ------------------------------------------------------------ */
+.manifesto {
+  background: var(--void);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: var(--s-8);
+  padding-inline: var(--s-5);
+  position: relative;
+}
+.manifesto::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(200,244,0,0.03) 0%, transparent 70%);
+  pointer-events: none;
+}
+.manifesto-inner {
+  max-width: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+}
+.manifesto-line {
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 600;
+  color: var(--text-muted);
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+  max-width: none;
+}
+.manifesto-line em {
+  font-style: normal;
+  color: var(--text);
+}
+.manifesto-line--beat {
+  margin-top: var(--s-2);
+  color: var(--text);
+}
+.manifesto-line--climax {
+  margin-top: var(--s-3);
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+.manifesto-line--climax em {
+  color: var(--lime);
+}
+@media (max-width: 600px) {
+  .manifesto-inner { gap: var(--s-3); }
+}
+
 /* ---- Intro overlay -------------------------------------------------------- */
 .intro-overlay {
   position: fixed;
