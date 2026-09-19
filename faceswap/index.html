@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Primary SEO -->
+  <title>Face Fun | JL Fitness</title>
+  <meta name="description" content="Drop your face into a JL Fitness gym cutout board, right in your browser. Live selfie only — nothing is ever uploaded or saved.">
+  <link rel="canonical" href="https://abeenarson73-web.github.io/jl-fitness/jl-fitness/faceswap/">
+
+  <meta name="author" content="JL Fitness">
+  <meta name="theme-color" content="#0d0d0d">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="JL Fitness">
+  <meta property="og:title" content="Face Fun | JL Fitness">
+  <meta property="og:description" content="Drop your face into a JL Fitness gym cutout board, right in your browser. Live selfie only — nothing is ever uploaded or saved.">
+  <meta property="og:url" content="https://abeenarson73-web.github.io/jl-fitness/jl-fitness/faceswap/">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:image" content="https://abeenarson73-web.github.io/jl-fitness/assets/img/logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Face Fun | JL Fitness">
+  <meta name="twitter:description" content="Drop your face into a JL Fitness gym cutout board, right in your browser. Live selfie only — nothing is ever uploaded or saved.">
+  <meta name="twitter:image" content="https://abeenarson73-web.github.io/jl-fitness/assets/img/logo.png">
+
+  <meta name="robots" content="noindex, follow">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/jl-fitness/assets/css/main.css">
+  <link rel="icon" href="/jl-fitness/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="/jl-fitness/">
+        <img class="brand-logo" src="/jl-fitness/assets/img/logo.png" alt="JL Fitness — Rise, Conquer, Overcome">
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+
+        <a href="/jl-fitness/">Home</a>
+
+        <a href="/jl-fitness/shop/">Shop</a>
+
+        <a href="/jl-fitness/about/">About</a>
+
+        <a href="/jl-fitness/gallery/">Gallery</a>
+
+        <a href="/jl-fitness/faceswap/" aria-current="page">Face Fun</a>
+
+        <a href="/jl-fitness/contact/">Contact</a>
+
+      </nav>
+      <a class="btn btn--accent header-cta" href="/jl-fitness/shop/">Shop Now</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="eyebrow">Just for Fun</p>
+        <h1 class="reveal">Get on the<br>Cutout Board.</h1>
+        <p class="lead reveal" style="margin-top: var(--s-3)">Pick a gym-legend board, snap a live selfie, and drop your face into the frame — like the boardwalk photo cutouts, but digital.</p>
+      </div>
+    </section>
+
+    <section class="section section--dark">
+      <div class="wrap">
+        <div class="faceswap-app" id="faceswap-app" data-state="idle">
+
+          <div data-picker>
+            <div style="text-align:center">
+              <p class="eyebrow">Step 1</p>
+              <h2 style="margin-top: var(--s-2)">Pick Your Board</h2>
+            </div>
+            <div class="template-picker"></div>
+            <div class="faceswap-start">
+              <button type="button" class="btn btn--accent btn--lg" data-start>Start Camera</button>
+            </div>
+          </div>
+
+          <div data-stage>
+            <div style="text-align:center; margin-bottom: var(--s-4)">
+              <p class="eyebrow">Step 2</p>
+              <h2 style="margin-top: var(--s-2)">Strike a Pose</h2>
+            </div>
+
+            <div class="faceswap-video-wrap" data-video-wrap>
+              <video data-video playsinline autoplay muted></video>
+              <div class="face-guide"></div>
+            </div>
+
+            <canvas data-result></canvas>
+
+            <div class="faceswap-controls">
+              <button type="button" class="btn btn--accent" data-capture>Capture</button>
+              <button type="button" class="btn btn--outline" data-retake>Retake</button>
+              <button type="button" class="btn btn--red" data-download>Download</button>
+              <button type="button" class="btn btn--outline" data-change-template>Change Board</button>
+            </div>
+
+            <p class="faceswap-status" data-status></p>
+          </div>
+
+          <div class="faceswap-privacy-note">
+            <span>🔒</span>
+            <p><strong>Runs entirely in your browser.</strong> Your camera feed and photo are processed on your device only — nothing is ever uploaded, stored, or sent to a server. Only your own live selfie is used; there's no option to upload a photo of anyone else. Closing or refreshing this page discards everything.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-top">
+      <div class="footer-brand">
+        <img class="footer-logo" src="/jl-fitness/assets/img/logo.png" alt="JL Fitness — Rise, Conquer, Overcome">
+        <p class="footer-tagline">Built for every rep, every mile, every moment.</p>
+      </div>
+      <div class="footer-links">
+        <p class="footer-col-label">Navigate</p>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="/jl-fitness/">Home</a><a href="/jl-fitness/shop/">Shop</a><a href="/jl-fitness/about/">About</a><a href="/jl-fitness/gallery/">Gallery</a><a href="/jl-fitness/faceswap/">Face Fun</a><a href="/jl-fitness/contact/">Contact</a>
+        </nav>
+      </div>
+      <div class="footer-contact-col">
+        <p class="footer-col-label">Contact</p>
+        <a href="mailto:hello@reallygreatsite.com">hello@reallygreatsite.com</a>
+        <a href="tel:+1-123-456-7890">+1-123-456-7890</a>
+        <div class="footer-social">
+          <a href="https://instagram.com/jlfitness" aria-label="Instagram" target="_blank" rel="noopener">IG</a>
+          <a href="https://tiktok.com/@jlfitness" aria-label="TikTok" target="_blank" rel="noopener">TT</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap footer-legal">
+      <p>&copy; 2026 JL Fitness. All rights reserved. &mdash; Free shipping on orders over $75.</p>
+    </div>
+  </footer>
+
+  <script src="/jl-fitness/assets/js/main.js" defer></script>
+  <script src="/jl-fitness/assets/js/faceswap.js" defer></script>
+</body>
+</html>
